@@ -17,12 +17,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         User user = new User();
-        user.setAge(1);
-        user.setName("dsds");
-
+        user.setAge(2);
+        user.setName("http://quanke.name");
 
         String userStr = JSON.toJSONString(user);
 
         Log.d("userStr:",userStr);
+
+        User userObj = JSON.parseObject(userStr,User.class);
+
+        Log.d("userObj:",userObj+"");
     }
 }
